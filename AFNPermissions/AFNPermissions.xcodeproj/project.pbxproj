@@ -8,12 +8,46 @@
 
 /* Begin PBXBuildFile section */
 		CE93F74A20B08C4A00DE984A /* AFNPermissions.h in Headers */ = {isa = PBXBuildFile; fileRef = CE93F74820B08C4A00DE984A /* AFNPermissions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE93F79820B08E6300DE984A /* PermissionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F79720B08E6300DE984A /* PermissionController.swift */; };
+		CE93F79A20B08F1700DE984A /* PermissionControllerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F79920B08F1700DE984A /* PermissionControllerProvider.swift */; };
+		CE93F79C20B08F2E00DE984A /* PermissionPromptController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F79B20B08F2E00DE984A /* PermissionPromptController.swift */; };
+		CE93F79F20B08F4700DE984A /* LocationPermissionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F79E20B08F4700DE984A /* LocationPermissionController.swift */; };
+		CE93F7A120B08F5600DE984A /* PhotosPermissionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F7A020B08F5600DE984A /* PhotosPermissionController.swift */; };
+		CE93F7A320B08F6E00DE984A /* Permissions.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE93F7A220B08F6E00DE984A /* Permissions.xcassets */; };
+		CE93F7A520B08F8A00DE984A /* Permission.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F7A420B08F8A00DE984A /* Permission.swift */; };
+		CE93F7A720B08F9300DE984A /* PermissionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F7A620B08F9300DE984A /* PermissionError.swift */; };
+		CE93F7A920B08F9C00DE984A /* PermissionPromptResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F7A820B08F9C00DE984A /* PermissionPromptResult.swift */; };
+		CE93F7AB20B08FA400DE984A /* PermissionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F7AA20B08FA400DE984A /* PermissionStatus.swift */; };
+		CE93F7B320B08FDC00DE984A /* PermissionPromptViewControllerAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F7AC20B08FDC00DE984A /* PermissionPromptViewControllerAnimationController.swift */; };
+		CE93F7B420B08FDC00DE984A /* PermissionPromptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F7AD20B08FDC00DE984A /* PermissionPromptViewController.swift */; };
+		CE93F7B520B08FDC00DE984A /* Permission+PermissionPromptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F7AE20B08FDC00DE984A /* Permission+PermissionPromptViewModel.swift */; };
+		CE93F7B620B08FDC00DE984A /* PermissionPromptViewControllerPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F7AF20B08FDC00DE984A /* PermissionPromptViewControllerPresentationController.swift */; };
+		CE93F7B720B08FDC00DE984A /* PermissionPromptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F7B020B08FDC00DE984A /* PermissionPromptView.swift */; };
+		CE93F7B820B08FDC00DE984A /* PermissionPromptViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE93F7B120B08FDC00DE984A /* PermissionPromptViewController.xib */; };
+		CE93F7B920B08FDC00DE984A /* PermissionPromptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F7B220B08FDC00DE984A /* PermissionPromptViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CE93F74520B08C4A00DE984A /* AFNPermissions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AFNPermissions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE93F74820B08C4A00DE984A /* AFNPermissions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFNPermissions.h; sourceTree = "<group>"; };
 		CE93F74920B08C4A00DE984A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE93F79720B08E6300DE984A /* PermissionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionController.swift; sourceTree = "<group>"; };
+		CE93F79920B08F1700DE984A /* PermissionControllerProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionControllerProvider.swift; sourceTree = "<group>"; };
+		CE93F79B20B08F2E00DE984A /* PermissionPromptController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionPromptController.swift; sourceTree = "<group>"; };
+		CE93F79E20B08F4700DE984A /* LocationPermissionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPermissionController.swift; sourceTree = "<group>"; };
+		CE93F7A020B08F5600DE984A /* PhotosPermissionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosPermissionController.swift; sourceTree = "<group>"; };
+		CE93F7A220B08F6E00DE984A /* Permissions.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Permissions.xcassets; sourceTree = "<group>"; };
+		CE93F7A420B08F8A00DE984A /* Permission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Permission.swift; sourceTree = "<group>"; };
+		CE93F7A620B08F9300DE984A /* PermissionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionError.swift; sourceTree = "<group>"; };
+		CE93F7A820B08F9C00DE984A /* PermissionPromptResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionPromptResult.swift; sourceTree = "<group>"; };
+		CE93F7AA20B08FA400DE984A /* PermissionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionStatus.swift; sourceTree = "<group>"; };
+		CE93F7AC20B08FDC00DE984A /* PermissionPromptViewControllerAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionPromptViewControllerAnimationController.swift; sourceTree = "<group>"; };
+		CE93F7AD20B08FDC00DE984A /* PermissionPromptViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionPromptViewController.swift; sourceTree = "<group>"; };
+		CE93F7AE20B08FDC00DE984A /* Permission+PermissionPromptViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Permission+PermissionPromptViewModel.swift"; sourceTree = "<group>"; };
+		CE93F7AF20B08FDC00DE984A /* PermissionPromptViewControllerPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionPromptViewControllerPresentationController.swift; sourceTree = "<group>"; };
+		CE93F7B020B08FDC00DE984A /* PermissionPromptView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionPromptView.swift; sourceTree = "<group>"; };
+		CE93F7B120B08FDC00DE984A /* PermissionPromptViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PermissionPromptViewController.xib; sourceTree = "<group>"; };
+		CE93F7B220B08FDC00DE984A /* PermissionPromptViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionPromptViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +80,11 @@
 		CE93F74720B08C4A00DE984A /* AFNPermissions */ = {
 			isa = PBXGroup;
 			children = (
+				CE93F76720B08CD700DE984A /* Controllers */,
+				CE93F76820B08CDE00DE984A /* Resources */,
 				CE93F76620B08C9900DE984A /* Support Files */,
+				CE93F76920B08CE300DE984A /* Values */,
+				CE93F76A20B08CE800DE984A /* View */,
 			);
 			path = AFNPermissions;
 			sourceTree = "<group>";
@@ -58,6 +96,59 @@
 				CE93F74920B08C4A00DE984A /* Info.plist */,
 			);
 			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		CE93F76720B08CD700DE984A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE93F79720B08E6300DE984A /* PermissionController.swift */,
+				CE93F79920B08F1700DE984A /* PermissionControllerProvider.swift */,
+				CE93F79B20B08F2E00DE984A /* PermissionPromptController.swift */,
+				CE93F79D20B08F3F00DE984A /* Concrete */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CE93F76820B08CDE00DE984A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE93F7A220B08F6E00DE984A /* Permissions.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CE93F76920B08CE300DE984A /* Values */ = {
+			isa = PBXGroup;
+			children = (
+				CE93F7A420B08F8A00DE984A /* Permission.swift */,
+				CE93F7A620B08F9300DE984A /* PermissionError.swift */,
+				CE93F7A820B08F9C00DE984A /* PermissionPromptResult.swift */,
+				CE93F7AA20B08FA400DE984A /* PermissionStatus.swift */,
+			);
+			path = Values;
+			sourceTree = "<group>";
+		};
+		CE93F76A20B08CE800DE984A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE93F7AE20B08FDC00DE984A /* Permission+PermissionPromptViewModel.swift */,
+				CE93F7B020B08FDC00DE984A /* PermissionPromptView.swift */,
+				CE93F7AD20B08FDC00DE984A /* PermissionPromptViewController.swift */,
+				CE93F7B120B08FDC00DE984A /* PermissionPromptViewController.xib */,
+				CE93F7AC20B08FDC00DE984A /* PermissionPromptViewControllerAnimationController.swift */,
+				CE93F7AF20B08FDC00DE984A /* PermissionPromptViewControllerPresentationController.swift */,
+				CE93F7B220B08FDC00DE984A /* PermissionPromptViewModel.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE93F79D20B08F3F00DE984A /* Concrete */ = {
+			isa = PBXGroup;
+			children = (
+				CE93F79E20B08F4700DE984A /* LocationPermissionController.swift */,
+				CE93F7A020B08F5600DE984A /* PhotosPermissionController.swift */,
+			);
+			path = Concrete;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,6 +194,7 @@
 				TargetAttributes = {
 					CE93F74420B08C4A00DE984A = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 				};
 			};
@@ -128,6 +220,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE93F7A320B08F6E00DE984A /* Permissions.xcassets in Resources */,
+				CE93F7B820B08FDC00DE984A /* PermissionPromptViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +232,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE93F7B520B08FDC00DE984A /* Permission+PermissionPromptViewModel.swift in Sources */,
+				CE93F79820B08E6300DE984A /* PermissionController.swift in Sources */,
+				CE93F7A920B08F9C00DE984A /* PermissionPromptResult.swift in Sources */,
+				CE93F7B420B08FDC00DE984A /* PermissionPromptViewController.swift in Sources */,
+				CE93F7AB20B08FA400DE984A /* PermissionStatus.swift in Sources */,
+				CE93F79A20B08F1700DE984A /* PermissionControllerProvider.swift in Sources */,
+				CE93F7B620B08FDC00DE984A /* PermissionPromptViewControllerPresentationController.swift in Sources */,
+				CE93F7A720B08F9300DE984A /* PermissionError.swift in Sources */,
+				CE93F7A520B08F8A00DE984A /* Permission.swift in Sources */,
+				CE93F7B920B08FDC00DE984A /* PermissionPromptViewModel.swift in Sources */,
+				CE93F7B320B08FDC00DE984A /* PermissionPromptViewControllerAnimationController.swift in Sources */,
+				CE93F79C20B08F2E00DE984A /* PermissionPromptController.swift in Sources */,
+				CE93F7A120B08F5600DE984A /* PhotosPermissionController.swift in Sources */,
+				CE93F79F20B08F4700DE984A /* LocationPermissionController.swift in Sources */,
+				CE93F7B720B08FDC00DE984A /* PermissionPromptView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +376,7 @@
 		CE93F74E20B08C4A00DE984A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -276,6 +386,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "$(SRCROOT)/AFNPermissions/Support Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -284,6 +395,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.davemess.AFNPermissions;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -292,6 +404,7 @@
 		CE93F74F20B08C4A00DE984A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -301,6 +414,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "$(SRCROOT)/AFNPermissions/Support Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
