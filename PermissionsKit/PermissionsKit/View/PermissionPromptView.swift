@@ -37,7 +37,7 @@ class PermissionPromptView: UIView {
         reasonLabel.text = permissionViewModel.reason
         
         let acceptTitle = NSLocalizedString("Enable \(permissionViewModel.title)", comment: "")
-        acceptButton.setTitle(acceptTitle, for: UIControlState())
+        acceptButton.setTitle(acceptTitle, for: UIControl.State())
     }
     
     // MARK: - actions
