@@ -12,10 +12,10 @@ import Foundation
 public enum Permission: CaseIterable {
     // TODO: add remaining permissions
 //    case bluetooth
+    case calendar
     case camera
 //    case cloudKit
     case contacts
-//    case calendar
     case locationWhenInUse
     case locationAlways
 //    case media
@@ -23,7 +23,7 @@ public enum Permission: CaseIterable {
 //    case motion
 //    case music
     case photos
-//    case reminders
+    case reminders
 //    case speech
 }
 
@@ -31,6 +31,8 @@ extension Permission: CustomStringConvertible {
     
     public var description: String {
         switch self {
+        case .calendar:
+            return NSLocalizedString("calendar", comment: "")
         case .camera:
             return NSLocalizedString("camera", comment: "")
         case .contacts:
@@ -43,6 +45,8 @@ extension Permission: CustomStringConvertible {
             return NSLocalizedString("microphone", comment: "")
         case .photos:
             return NSLocalizedString("photos", comment: "")
+        case .reminders:
+            return NSLocalizedString("reminders", comment: "")
         }
     }
     

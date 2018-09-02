@@ -19,6 +19,11 @@ public class PermissionControllerProvider {
     
     // MARK: - Properties
     
+    private lazy var calendarPermissionController: CalendarPermissionController = {
+        let controller = CalendarPermissionController()
+        return controller
+    }()
+    
     private lazy var cameraPermissionController: CameraPermissionController = {
         let controller = CameraPermissionController()
         return controller
@@ -45,7 +50,13 @@ public class PermissionControllerProvider {
     }()
     
     private lazy var photosPermissionController: PhotosPermissionController = {
-        return PhotosPermissionController()
+        let controller = PhotosPermissionController()
+        return controller
+    }()
+    
+    private lazy var remindersPermissionController: RemindersPermissionController = {
+        let controller = RemindersPermissionController()
+        return controller
     }()
     
     // MARK: - Public
@@ -56,6 +67,8 @@ public class PermissionControllerProvider {
     /// - Returns: a controller for the specified permission.
     public func permissionController(_ permission: Permission) -> PermissionController {
         switch permission {
+        case .calendar:
+            return calendarPermissionController
         case .camera:
             return cameraPermissionController
         case .contacts:
@@ -68,6 +81,8 @@ public class PermissionControllerProvider {
             return microphonePermissionController
         case .photos:
             return photosPermissionController
+        case .reminders:
+            return remindersPermissionController
         }
     }
     
