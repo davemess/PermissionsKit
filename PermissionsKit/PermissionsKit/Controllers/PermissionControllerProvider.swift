@@ -44,13 +44,10 @@ public class PermissionControllerProvider {
     /// - Returns: a controller for the specified permission.
     public func permissionController(_ permission: Permission) -> PermissionController {
         switch permission {
-        case .location(let type):
-            switch type {
-            case .always:
-                return alwaysLocationPermissionController
-            case .whenInUse:
-                return whenInUseLocationPermissionController
-            }
+        case .locationWhenInUse:
+            return whenInUseLocationPermissionController
+        case .locationAlways:
+            return alwaysLocationPermissionController
         case .photos:
             return photosPermissionController
         }

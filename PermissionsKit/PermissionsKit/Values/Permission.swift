@@ -9,14 +9,24 @@
 import Foundation
 
 /// Defines a set of iOS permissions.
-public enum Permission {
+public enum Permission: CaseIterable {
     case photos
-    case location(type: LocationAccessType)
+    case locationWhenInUse
+    case locationAlways
     // TODO: add remaining permissions
 }
 
-/// Defines options for location permission access.
-public enum LocationAccessType {
-    case whenInUse
-    case always
+extension Permission: CustomStringConvertible {
+    
+    public var description: String {
+        switch self {
+        case .photos:
+            return NSLocalizedString("photos", comment: "")
+        case .locationWhenInUse:
+            return NSLocalizedString("location when in use", comment: "")
+        case .locationAlways:
+            return NSLocalizedString("location always", comment: "")
+        }
+    }
+    
 }

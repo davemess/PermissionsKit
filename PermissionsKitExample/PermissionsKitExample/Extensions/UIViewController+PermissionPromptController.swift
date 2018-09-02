@@ -18,7 +18,7 @@ extension PermissionPromptController where Self: UIViewController {
         switch status {
         case .unknown:
             if shouldPromptForPermission(permission) {
-                promptForPermission(permission, resultHandler: resultHandler)
+                promptForPermission(permission, animated: true, resultHandler: resultHandler)
             } else {
                 let error = PermissionError.notGranted(permission: permission)
                 resultHandler(.denied(error: error))

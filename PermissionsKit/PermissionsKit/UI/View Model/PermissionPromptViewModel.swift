@@ -8,7 +8,7 @@
 
 import UIKit
 
-/// View model for configure a PermissionPromptView.
+/// View model for configuring a PermissionPromptView.
 struct PermissionPromptViewModel {
     
     let icon: UIImage

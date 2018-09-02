@@ -35,11 +35,8 @@ class LocationPermissionController: NSObject, PermissionController {
         self.locationManager.delegate = self
     }
     
-    // MARK: - PermissionController
-    
     func promptForPermission(_ resultHandler: @escaping PermissionPromptResultHandler) {
-        self.resultHandler = resultHandler
-        locationManager.requestWhenInUseAuthorization()
+        assertionFailure("Do not instantiate the abstract class.")
     }
 }
 
@@ -48,7 +45,7 @@ extension LocationPermissionController: CLLocationManagerDelegate {}
 /// Concrete controller for when in use location permission access.
 class LocationWhenInUsePermissionController: LocationPermissionController {
     
-    override var permission: Permission { return .location(type: .whenInUse) }
+    override var permission: Permission { return .locationWhenInUse }
     
     override var permissionStatus: PermissionStatus {
         let status = CLLocationManager.authorizationStatus()
@@ -60,6 +57,11 @@ class LocationWhenInUsePermissionController: LocationPermissionController {
         case .authorizedWhenInUse:
             return .permitted
         }
+    }
+    
+    override func promptForPermission(_ resultHandler: @escaping PermissionPromptResultHandler) {
+        self.resultHandler = resultHandler
+        locationManager.requestWhenInUseAuthorization()
     }
 }
 
@@ -84,7 +86,7 @@ extension LocationWhenInUsePermissionController {
 /// Concrete controller for always location permission access.
 class LocationAlwaysPermissionController: LocationPermissionController {
     
-    override var permission: Permission { return .location(type: .always) }
+    override var permission: Permission { return .locationAlways }
     
     override var permissionStatus: PermissionStatus {
         let status = CLLocationManager.authorizationStatus()
@@ -96,6 +98,11 @@ class LocationAlwaysPermissionController: LocationPermissionController {
         case .authorizedAlways:
             return .permitted
         }
+    }
+    
+    override func promptForPermission(_ resultHandler: @escaping PermissionPromptResultHandler) {
+        self.resultHandler = resultHandler
+        locationManager.requestAlwaysAuthorization()
     }
 }
 

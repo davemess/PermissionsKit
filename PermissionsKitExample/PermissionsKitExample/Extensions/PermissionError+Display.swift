@@ -12,22 +12,39 @@ import PermissionsKit
 /// Extends PermissionError with display functions.
 extension PermissionError: LocalizedError {
     
-    public var localizedDescription: String {
+    public var errorDescription: String? {
+        switch self {
+        case .notAccepted(let permission), .notGranted(let permission), .restricted(let permission):
+            let permissionTitle = String(describing: permission)
+            return NSLocalizedString("Unable to access your \(permissionTitle).", comment: "")
+        }
+    }
+    
+    public var failureReason: String? {
         let errorString: String
         
         switch self {
-            
-        case .notAccepted(let permission):
-            let permissionTitle = String(describing: permission)
-            errorString = NSLocalizedString("Unable to access your \(permissionTitle). You can change your mind by selecting the option again.", comment: "")
-            
-        case .notGranted(let permission):
-            let permissionTitle = String(describing: permission)
-            errorString = NSLocalizedString("Unable to access your \(permissionTitle). You can go to Settings to allow access.", comment: "")
-            
-        case .restricted(let permission):
-            let permissionTitle = String(describing: permission)
-            errorString = NSLocalizedString("Unable to access your \(permissionTitle). Your permission is restricted, and you will not be able to use this feature.", comment: "")
+        case .notAccepted:
+            errorString = NSLocalizedString("You did not accept the requested permission.", comment: "")
+        case .notGranted:
+            errorString = NSLocalizedString("You did not accept the system prompt.", comment: "")
+        case .restricted:
+            errorString = NSLocalizedString("This permission is restricted.", comment: "")
+        }
+        
+        return errorString
+    }
+    
+    public var recoverySuggestion: String? {
+        let errorString: String
+        
+        switch self {
+        case .notAccepted:
+            errorString = NSLocalizedString("You can change your mind by selecting the option again.", comment: "")
+        case .notGranted:
+            errorString = NSLocalizedString("You can go to Settings to allow access.", comment: "")
+        case .restricted:
+            errorString = NSLocalizedString("Your permission is restricted, and you will not be able to use this feature.", comment: "")
         }
         
         return errorString

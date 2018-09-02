@@ -18,23 +18,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="R3b-Ll-kSc">
-                                <rect key="frame" x="91" y="293.5" width="193" height="80"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ws0-NM-iVo" customClass="PermissionButton" customModule="PermissionsKitExample" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="193" height="30"/>
-                                        <state key="normal" title="Check Location Permissions"/>
-                                        <connections>
-                                            <action selector="checkLocationPermissions:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dVz-fF-vDp"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1eX-AN-RoY" customClass="PermissionButton" customModule="PermissionsKitExample" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="193" height="30"/>
-                                        <state key="normal" title="Check Photos Permissions"/>
-                                        <connections>
-                                            <action selector="checkPhotosPermissions:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8D3-q0-zyf"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
+                                <rect key="frame" x="137.5" y="283.5" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" placeholder="YES" id="t5E-4z-To4"/>
+                                    <constraint firstAttribute="width" constant="100" placeholder="YES" id="wW7-2S-zaG"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -45,8 +33,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="locationButton" destination="Ws0-NM-iVo" id="l4T-HE-qb6"/>
-                        <outlet property="photosButton" destination="1eX-AN-RoY" id="3Ib-5Z-sdf"/>
+                        <outlet property="stackView" destination="R3b-Ll-kSc" id="ofB-5Z-G4w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

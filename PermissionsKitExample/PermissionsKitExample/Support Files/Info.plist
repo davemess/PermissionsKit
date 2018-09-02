@@ -21,9 +21,13 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>// TODO: use real privacy message</string>
+	<string>We use this permission for demonstration purposes. Your app should customize this message.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>We use this permission for demonstration purposes. Your app should customize this message.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>We use this permission for demonstration purposes. Your app should customize this message.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>// TODO: use real privacy message</string>
+	<string>We use this permission for demonstration purposes. Your app should customize this message.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

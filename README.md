@@ -5,11 +5,11 @@
 [![Platform](https://img.shields.io/cocoapods/p/PermissionsKit.svg?style=flat)](https://github.com/davemess/PermissionsKit)
 
 # PermissionsKit
-A Swift library for handling permissions requests on iOS.
+PermissionsKit is an easy-to-use and unified permissions api for determining and requesting access to system resources that require user permission. In addition, a simple UI is included for prompting the user for permissions.
 
 ## TODO
 _Admin_
-- [ ] Document public interface
+- [x] Document public interface
 - [ ] Update README with usage examples
 - [ ] Versioning
 

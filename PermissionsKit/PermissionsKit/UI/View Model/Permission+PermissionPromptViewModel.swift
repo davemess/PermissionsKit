@@ -19,7 +19,7 @@ extension Permission {
         let bundle = Bundle(for: PermissionPromptView.self)
         
         switch self {
-        case .location:
+        case .locationWhenInUse, .locationAlways:
             icon = UIImage(named: "icon_location", in: bundle, compatibleWith: nil)!
             title = NSLocalizedString("Location", comment: "")
             reason = NSLocalizedString("Location permission is necessary for determining your current location.", comment: "") // TODO: replace text

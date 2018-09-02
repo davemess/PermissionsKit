@@ -100,7 +100,7 @@
 				CE93F76820B08CDE00DE984A /* Resources */,
 				CE93F76620B08C9900DE984A /* Support Files */,
 				CE93F76920B08CE300DE984A /* Values */,
-				CE93F76A20B08CE800DE984A /* View */,
+				CE93F76A20B08CE800DE984A /* UI */,
 			);
 			path = PermissionsKit;
 			sourceTree = "<group>";
@@ -144,19 +144,15 @@
 			path = Values;
 			sourceTree = "<group>";
 		};
-		CE93F76A20B08CE800DE984A /* View */ = {
+		CE93F76A20B08CE800DE984A /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				CE93F7AE20B08FDC00DE984A /* Permission+PermissionPromptViewModel.swift */,
-				CE93F7B020B08FDC00DE984A /* PermissionPromptView.swift */,
-				CE93F7AD20B08FDC00DE984A /* PermissionPromptViewController.swift */,
-				CE93F7B120B08FDC00DE984A /* PermissionPromptViewController.xib */,
-				CE93F7AC20B08FDC00DE984A /* PermissionPromptViewControllerAnimationController.swift */,
-				CE93F7AF20B08FDC00DE984A /* PermissionPromptViewControllerPresentationController.swift */,
-				CE93F7B220B08FDC00DE984A /* PermissionPromptViewModel.swift */,
-				CE972EF6213C60EF00F2151E /* UIViewController+PermissionPromptController.swift */,
+				CE972EFC213C67E600F2151E /* Extensions */,
+				CE972EFA213C67CE00F2151E /* View */,
+				CE972EFB213C67D800F2151E /* View Controllers */,
+				CE972EF9213C67C600F2151E /* View Model */,
 			);
-			path = View;
+			path = UI;
 			sourceTree = "<group>";
 		};
 		CE93F79D20B08F3F00DE984A /* Concrete */ = {
@@ -166,6 +162,50 @@
 				CE93F7A020B08F5600DE984A /* PhotosPermissionController.swift */,
 			);
 			path = Concrete;
+			sourceTree = "<group>";
+		};
+		CE972EF9213C67C600F2151E /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE93F7AE20B08FDC00DE984A /* Permission+PermissionPromptViewModel.swift */,
+				CE93F7B220B08FDC00DE984A /* PermissionPromptViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		CE972EFA213C67CE00F2151E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE93F7B020B08FDC00DE984A /* PermissionPromptView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE972EFB213C67D800F2151E /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE93F7AD20B08FDC00DE984A /* PermissionPromptViewController.swift */,
+				CE93F7B120B08FDC00DE984A /* PermissionPromptViewController.xib */,
+				CE972EFD213C67FB00F2151E /* Presentation */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		CE972EFC213C67E600F2151E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CE972EF6213C60EF00F2151E /* UIViewController+PermissionPromptController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CE972EFD213C67FB00F2151E /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				CE93F7AC20B08FDC00DE984A /* PermissionPromptViewControllerAnimationController.swift */,
+				CE93F7AF20B08FDC00DE984A /* PermissionPromptViewControllerPresentationController.swift */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
