@@ -11,6 +11,39 @@ import PermissionsKit
 import os.log
 
 class ViewController: UIViewController, PermissionPromptController {
+    
+    @IBOutlet weak var locationButton: PermissionButton!
+    @IBOutlet weak var photosButton: PermissionButton!
+    
+    var permissionButtons: [PermissionButton] {
+        return [
+            locationButton,
+            photosButton,
+        ]
+    }
+    
+    var permissionMapping: [PermissionButton: Permission] {
+        return [
+            locationButton: .location,
+            photosButton: .photos,
+        ]
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        permissionMapping.forEach { (button, permission) in
+            button.permission = permission
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        permissionButtons.forEach {
+            $0.refresh()
+        }
+    }
 
     
     @IBAction func checkLocationPermissions(_ sender: Any) {

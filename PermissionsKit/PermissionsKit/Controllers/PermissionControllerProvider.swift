@@ -10,14 +10,14 @@ import Foundation
 import CoreLocation
 
 /// Defines a protocol for providing permission controllers.
-protocol PermissionControllerProvider {
+public protocol PermissionControllerProvider {
     func permissionController(_ permission: Permission) -> PermissionController
 }
 
 /// Default permission controller factory provider.
-class PermissionControllerFactory: PermissionControllerProvider {
+public class PermissionControllerFactory: PermissionControllerProvider {
     
-    static let sharedInstance = PermissionControllerFactory()
+    public static let sharedInstance = PermissionControllerFactory()
     private init() {}
     
     private lazy var locationPermissionController: LocationPermissionController = {
@@ -27,7 +27,7 @@ class PermissionControllerFactory: PermissionControllerProvider {
     }()
     private var photosPermissionController = PhotosPermissionController()
     
-    func permissionController(_ permission: Permission) -> PermissionController {
+    public func permissionController(_ permission: Permission) -> PermissionController {
         switch permission {
         case .location:
             return locationPermissionController

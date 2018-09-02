@@ -9,7 +9,7 @@
 import Foundation
 
 /// Defines a protocol for managing app permissions.
-protocol PermissionController {
+public protocol PermissionController {
     var permission: Permission { get }
     
     func permissionStatus() -> PermissionStatus
