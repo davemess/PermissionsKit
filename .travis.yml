@@ -1,0 +1,4 @@
+os: osx
+osx_image: xcode10
+language: swift
+script: xcodebuild -workspace PermissionsKit.xcworkspace -scheme PermissionsKit -configuration Debug ONLY_ACTIVE_ARCH=NO test | xcpretty -c
