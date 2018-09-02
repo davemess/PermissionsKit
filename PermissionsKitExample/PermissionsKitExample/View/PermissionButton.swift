@@ -18,8 +18,8 @@ class PermissionButton: UIButton {
             return
         }
         
-        let controller = PermissionControllerFactory.sharedInstance.permissionController(permission)
-        let status = controller.permissionStatus()
+        let controller = PermissionControllerProvider.standard.permissionController(permission)
+        let status = controller.permissionStatus
         switch status {
         case .unknown:
             setTitleColor(.black, for: .normal)

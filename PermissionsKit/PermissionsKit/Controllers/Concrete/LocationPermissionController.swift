@@ -8,15 +8,25 @@
 
 import CoreLocation
 
-/// Concrete controller for location permission.
+/// An abstract superclass for location permission.
 class LocationPermissionController: NSObject, PermissionController {
     
-    var permission: Permission { return .location }
+    var permission: Permission {
+        fatalError("Do not instantiate the abstract class.")
+    }
     
-    private let locationManager: CLLocationManager
-    private var resultHandler: PermissionPromptResultHandler?
+    var permissionStatus: PermissionStatus {
+        fatalError("Do not instantiate the abstract class.")
+    }
     
-    // MARK: - lifecycle
+    var shouldPromptForPermission: Bool {
+        return CLLocationManager.locationServicesEnabled()
+    }
+    
+    fileprivate let locationManager: CLLocationManager
+    fileprivate var resultHandler: PermissionPromptResultHandler?
+    
+    // MARK: - Lifecycle
     
     init(_ locationManager: CLLocationManager) {
         self.locationManager = locationManager
@@ -25,23 +35,7 @@ class LocationPermissionController: NSObject, PermissionController {
         self.locationManager.delegate = self
     }
     
-    // MARK: - public
-    
-    func permissionStatus() -> PermissionStatus {
-        let status = CLLocationManager.authorizationStatus()
-        switch status {
-        case .notDetermined:
-            return .unknown
-        case .restricted, .denied:
-            return .denied
-        case .authorizedAlways, .authorizedWhenInUse:
-            return .permitted
-        }
-    }
-    
-    func shouldPromptForPermission() -> Bool {
-        return CLLocationManager.locationServicesEnabled()
-    }
+    // MARK: - PermissionController
     
     func promptForPermission(_ resultHandler: @escaping PermissionPromptResultHandler) {
         self.resultHandler = resultHandler
@@ -49,19 +43,75 @@ class LocationPermissionController: NSObject, PermissionController {
     }
 }
 
-extension LocationPermissionController: CLLocationManagerDelegate {
+extension LocationPermissionController: CLLocationManagerDelegate {}
+
+/// Concrete controller for when in use location permission access.
+class LocationWhenInUsePermissionController: LocationPermissionController {
+    
+    override var permission: Permission { return .location(type: .whenInUse) }
+    
+    override var permissionStatus: PermissionStatus {
+        let status = CLLocationManager.authorizationStatus()
+        switch status {
+        case .notDetermined:
+            return .unknown
+        case .restricted, .denied, .authorizedAlways:
+            return .denied
+        case .authorizedWhenInUse:
+            return .permitted
+        }
+    }
+}
+
+extension LocationWhenInUsePermissionController {
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         guard let resultHandler = self.resultHandler else { return }
         
         switch status {
-        case .notDetermined, .denied:
+        case .notDetermined, .denied, .authorizedAlways:
             let error = PermissionError.notGranted(permission: self.permission)
             resultHandler(.denied(error: error))
         case .restricted:
             let error = PermissionError.restricted(permission: self.permission)
             resultHandler(.denied(error: error))
-        case .authorizedAlways, .authorizedWhenInUse:
+        case .authorizedWhenInUse:
+            resultHandler(.accepted)
+        }
+    }
+}
+
+/// Concrete controller for always location permission access.
+class LocationAlwaysPermissionController: LocationPermissionController {
+    
+    override var permission: Permission { return .location(type: .always) }
+    
+    override var permissionStatus: PermissionStatus {
+        let status = CLLocationManager.authorizationStatus()
+        switch status {
+        case .notDetermined:
+            return .unknown
+        case .restricted, .denied, .authorizedWhenInUse:
+            return .denied
+        case .authorizedAlways:
+            return .permitted
+        }
+    }
+}
+
+extension LocationAlwaysPermissionController {
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        guard let resultHandler = self.resultHandler else { return }
+        
+        switch status {
+        case .notDetermined, .denied, .authorizedWhenInUse:
+            let error = PermissionError.notGranted(permission: self.permission)
+            resultHandler(.denied(error: error))
+        case .restricted:
+            let error = PermissionError.restricted(permission: self.permission)
+            resultHandler(.denied(error: error))
+        case .authorizedAlways:
             resultHandler(.accepted)
         }
     }

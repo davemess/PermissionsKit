@@ -13,7 +13,7 @@ class PhotosPermissionController: PermissionController {
     
     var permission: Permission { return .photos }
     
-    func permissionStatus() -> PermissionStatus {
+    var permissionStatus: PermissionStatus {
         let status = PHPhotoLibrary.authorizationStatus()
         switch status {
         case .notDetermined:
@@ -25,7 +25,7 @@ class PhotosPermissionController: PermissionController {
         }
     }
     
-    func shouldPromptForPermission() -> Bool {
+    var shouldPromptForPermission: Bool {
         let status = PHPhotoLibrary.authorizationStatus()
         return status == .notDetermined
     }

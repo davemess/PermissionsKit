@@ -16,7 +16,7 @@ class PermissionPromptViewController: UIViewController {
     let permissionController: PermissionController
     let resultHandler: PermissionPromptResultHandler
     
-    // MARK: - lifecycle
+    // MARK: - Lifecycle
     
     init(_ permissionController: PermissionController, resultHandler: @escaping PermissionPromptResultHandler) {
         self.permissionController = permissionController
@@ -37,7 +37,7 @@ class PermissionPromptViewController: UIViewController {
         self.transitioningDelegate = self
     }
     
-    // MARK: - view lifecycle
+    // MARK: - view Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()

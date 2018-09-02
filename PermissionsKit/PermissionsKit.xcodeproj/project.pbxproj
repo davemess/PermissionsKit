@@ -39,6 +39,7 @@
 		CE93F7B720B08FDC00DE984A /* PermissionPromptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F7B020B08FDC00DE984A /* PermissionPromptView.swift */; };
 		CE93F7B820B08FDC00DE984A /* PermissionPromptViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE93F7B120B08FDC00DE984A /* PermissionPromptViewController.xib */; };
 		CE93F7B920B08FDC00DE984A /* PermissionPromptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F7B220B08FDC00DE984A /* PermissionPromptViewModel.swift */; };
+		CE972EF7213C60EF00F2151E /* UIViewController+PermissionPromptController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE972EF6213C60EF00F2151E /* UIViewController+PermissionPromptController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		CE93F7B020B08FDC00DE984A /* PermissionPromptView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionPromptView.swift; sourceTree = "<group>"; };
 		CE93F7B120B08FDC00DE984A /* PermissionPromptViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PermissionPromptViewController.xib; sourceTree = "<group>"; };
 		CE93F7B220B08FDC00DE984A /* PermissionPromptViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionPromptViewModel.swift; sourceTree = "<group>"; };
+		CE972EF6213C60EF00F2151E /* UIViewController+PermissionPromptController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+PermissionPromptController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 				CE93F7AC20B08FDC00DE984A /* PermissionPromptViewControllerAnimationController.swift */,
 				CE93F7AF20B08FDC00DE984A /* PermissionPromptViewControllerPresentationController.swift */,
 				CE93F7B220B08FDC00DE984A /* PermissionPromptViewModel.swift */,
+				CE972EF6213C60EF00F2151E /* UIViewController+PermissionPromptController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				CE93F7B520B08FDC00DE984A /* Permission+PermissionPromptViewModel.swift in Sources */,
 				CE93F79820B08E6300DE984A /* PermissionController.swift in Sources */,
 				CE93F7A920B08F9C00DE984A /* PermissionPromptResult.swift in Sources */,
+				CE972EF7213C60EF00F2151E /* UIViewController+PermissionPromptController.swift in Sources */,
 				CE93F7B420B08FDC00DE984A /* PermissionPromptViewController.swift in Sources */,
 				CE93F7AB20B08FA400DE984A /* PermissionStatus.swift in Sources */,
 				CE93F79A20B08F1700DE984A /* PermissionControllerProvider.swift in Sources */,

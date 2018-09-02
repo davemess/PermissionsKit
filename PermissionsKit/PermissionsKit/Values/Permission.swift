@@ -8,9 +8,15 @@
 
 import Foundation
 
-/// Defines a set of app OS permissions.
+/// Defines a set of iOS permissions.
 public enum Permission {
-    case location
     case photos
+    case location(type: LocationAccessType)
     // TODO: add remaining permissions
+}
+
+/// Defines options for location permission access.
+public enum LocationAccessType {
+    case whenInUse
+    case always
 }

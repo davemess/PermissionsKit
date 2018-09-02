@@ -24,7 +24,7 @@ class ViewController: UIViewController, PermissionPromptController {
     
     var permissionMapping: [PermissionButton: Permission] {
         return [
-            locationButton: .location,
+            locationButton: .location(type: .whenInUse),
             photosButton: .photos,
         ]
     }
@@ -47,7 +47,7 @@ class ViewController: UIViewController, PermissionPromptController {
 
     
     @IBAction func checkLocationPermissions(_ sender: Any) {
-        let permission: Permission = .location
+        let permission: Permission = .location(type: .whenInUse)
         self.checkPermissionWithPromptIfNecessary(permission) { result in
             switch result {
             case .accepted:

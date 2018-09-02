@@ -9,28 +9,48 @@
 import Foundation
 import CoreLocation
 
-/// Defines a protocol for providing permission controllers.
-public protocol PermissionControllerProvider {
-    func permissionController(_ permission: Permission) -> PermissionController
-}
-
-/// Default permission controller factory provider.
-public class PermissionControllerFactory: PermissionControllerProvider {
+/// A singleton provider for supplying PermissionControllers.
+public class PermissionControllerProvider {
     
-    public static let sharedInstance = PermissionControllerFactory()
+    // MARK: - Lifecycle
+    
+    /// Returns the default provider object.
+    public static let standard = PermissionControllerProvider()
     private init() {}
     
-    private lazy var locationPermissionController: LocationPermissionController = {
+    // MARK: - Properties
+    
+    private lazy var alwaysLocationPermissionController: LocationPermissionController = {
         let locationManager = CLLocationManager()
-        let controller = LocationPermissionController(locationManager)
+        let controller = LocationAlwaysPermissionController(locationManager)
         return controller
     }()
-    private var photosPermissionController = PhotosPermissionController()
     
+    private lazy var whenInUseLocationPermissionController: LocationPermissionController = {
+        let locationManager = CLLocationManager()
+        let controller = LocationWhenInUsePermissionController(locationManager)
+        return controller
+    }()
+    
+    private lazy var photosPermissionController: PhotosPermissionController = {
+        PhotosPermissionController()
+    }()
+    
+    // MARK: - Public
+    
+    /// Returns a controller for the specified permission.
+    ///
+    /// - Parameter permission: the requested permission resource.
+    /// - Returns: a controller for the specified permission.
     public func permissionController(_ permission: Permission) -> PermissionController {
         switch permission {
-        case .location:
-            return locationPermissionController
+        case .location(let type):
+            switch type {
+            case .always:
+                return alwaysLocationPermissionController
+            case .whenInUse:
+                return whenInUseLocationPermissionController
+            }
         case .photos:
             return photosPermissionController
         }

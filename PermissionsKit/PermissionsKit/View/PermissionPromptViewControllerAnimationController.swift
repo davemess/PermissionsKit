@@ -13,7 +13,7 @@ class PermissionPromptViewControllerAnimationController: NSObject, UIViewControl
     
     let isPresenting: Bool
     
-    // MARK: - lifecycle
+    // MARK: - Lifecycle
     
     init(isPresenting: Bool) {
         self.isPresenting = isPresenting
