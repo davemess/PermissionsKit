@@ -6,6 +6,20 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		CE972EEE213C4E4C00F2151E /* Docs */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = CE972EF1213C4E4C00F2151E /* Build configuration list for PBXAggregateTarget "Docs" */;
+			buildPhases = (
+				CE972EF2213C4E4F00F2151E /* Jazzy */,
+			);
+			dependencies = (
+			);
+			name = Docs;
+			productName = Docs;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		CE93F74A20B08C4A00DE984A /* AFNPermissions.h in Headers */ = {isa = PBXBuildFile; fileRef = CE93F74820B08C4A00DE984A /* AFNPermissions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE93F79820B08E6300DE984A /* PermissionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F79720B08E6300DE984A /* PermissionController.swift */; };
@@ -197,6 +211,9 @@
 						CreatedOnToolsVersion = 9.3;
 						LastSwiftMigration = 1000;
 					};
+					CE972EEE213C4E4C00F2151E = {
+						CreatedOnToolsVersion = 10.0;
+					};
 				};
 			};
 			buildConfigurationList = CE93F73F20B08C4A00DE984A /* Build configuration list for PBXProject "PermissionsKit" */;
@@ -212,6 +229,7 @@
 			projectRoot = "";
 			targets = (
 				CE93F74420B08C4A00DE984A /* PermissionsKit */,
+				CE972EEE213C4E4C00F2151E /* Docs */,
 			);
 		};
 /* End PBXProject section */
@@ -246,6 +264,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		CE972EF2213C4E4F00F2151E /* Jazzy */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Jazzy;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which jazzy >/dev/null; then\n    jazzy\nelse\n    echo \"warning: Jazzy not installed, download from https://github.com/realm/jazzy\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -450,6 +486,24 @@
 			};
 			name = Release;
 		};
+		CE972EEF213C4E4C00F2151E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F3DZMTG4N6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CE972EF0213C4E4C00F2151E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F3DZMTG4N6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -467,6 +521,15 @@
 			buildConfigurations = (
 				CE93F74E20B08C4A00DE984A /* Debug */,
 				CE93F74F20B08C4A00DE984A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE972EF1213C4E4C00F2151E /* Build configuration list for PBXAggregateTarget "Docs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE972EEF213C4E4C00F2151E /* Debug */,
+				CE972EF0213C4E4C00F2151E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
