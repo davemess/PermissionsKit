@@ -40,11 +40,13 @@ class MicrophonePermissionController: PermissionController {
     
     func promptForPermission(_ resultHandler: @escaping PermissionPromptResultHandler) {
         audioSession.requestRecordPermission({ (granted) in
-            if granted == true {
-                resultHandler(.accepted)
-            } else {
-                let error = PermissionError.notGranted(permission: self.permission)
-                resultHandler(.denied(error: error))
+            DispatchQueue.main.async {
+                if granted == true {
+                    resultHandler(.accepted)
+                } else {
+                    let error = PermissionError.notGranted(permission: self.permission)
+                    resultHandler(.denied(error: error))
+                }
             }
         })
     }

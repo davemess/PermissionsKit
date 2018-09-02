@@ -31,12 +31,14 @@ class CameraPermissionController: PermissionController {
     }
     
     func promptForPermission(_ resultHandler: @escaping PermissionPromptResultHandler) {
-        AVCaptureDevice.requestAccess(for: .video) { (granted) in
-            if granted == true {
-                resultHandler(.accepted)
-            } else {
-                let error = PermissionError.notGranted(permission: self.permission)
-                resultHandler(.denied(error: error))
+        DispatchQueue.main.async {
+            AVCaptureDevice.requestAccess(for: .video) { (granted) in
+                if granted == true {
+                    resultHandler(.accepted)
+                } else {
+                    let error = PermissionError.notGranted(permission: self.permission)
+                    resultHandler(.denied(error: error))
+                }
             }
         }
     }

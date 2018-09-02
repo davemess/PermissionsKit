@@ -27,7 +27,8 @@ public protocol PermissionController {
     var shouldPromptForPermission: Bool { get }
     
     /// This action triggers the system prompt to request permission to the
-    /// associated resource.
+    /// associated resource. This is asynchronous and will return on the main
+    /// thread.
     ///
     /// - Parameter resultHandler: a handler which will contain the prompt result.
     func promptForPermission(_ resultHandler: @escaping PermissionPromptResultHandler)

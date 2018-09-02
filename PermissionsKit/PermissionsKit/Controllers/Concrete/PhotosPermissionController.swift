@@ -32,15 +32,17 @@ class PhotosPermissionController: PermissionController {
     
     func promptForPermission(_ resultHandler: @escaping PermissionPromptResultHandler) {
         PHPhotoLibrary.requestAuthorization { status in
-            switch status {
-            case .notDetermined, .denied:
-                let error = PermissionError.notGranted(permission: self.permission)
-                resultHandler(.denied(error: error))
-            case .restricted:
-                let error = PermissionError.restricted(permission: self.permission)
-                resultHandler(.denied(error: error))
-            case .authorized:
-                resultHandler(.accepted)
+            DispatchQueue.main.async {
+                switch status {
+                case .notDetermined, .denied:
+                    let error = PermissionError.notGranted(permission: self.permission)
+                    resultHandler(.denied(error: error))
+                case .restricted:
+                    let error = PermissionError.restricted(permission: self.permission)
+                    resultHandler(.denied(error: error))
+                case .authorized:
+                    resultHandler(.accepted)
+                }
             }
         }
     }
