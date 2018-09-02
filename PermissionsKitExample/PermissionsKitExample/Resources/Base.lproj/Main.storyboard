@@ -17,7 +17,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="R3b-Ll-kSc">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="casey-horner-763014-unsplash" translatesAutoresizingMaskIntoConstraints="NO" id="N4l-k7-0JD">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo by Casey Horner on Unsplash" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEy-Ds-bg1">
+                                <rect key="frame" x="8" y="632" width="204.5" height="15"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="R3b-Ll-kSc">
                                 <rect key="frame" x="137.5" y="283.5" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" placeholder="YES" id="t5E-4z-To4"/>
@@ -27,8 +36,15 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="iEy-Ds-bg1" secondAttribute="trailing" constant="8" id="0TK-CL-3yO"/>
                             <constraint firstItem="R3b-Ll-kSc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Qmj-3B-XWz"/>
+                            <constraint firstAttribute="bottom" secondItem="N4l-k7-0JD" secondAttribute="bottom" id="SpH-Wo-mJF"/>
+                            <constraint firstItem="N4l-k7-0JD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Tlz-Bk-3Vh"/>
+                            <constraint firstItem="N4l-k7-0JD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="aUC-cp-wEE"/>
+                            <constraint firstItem="iEy-Ds-bg1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="b9h-L2-z4J"/>
                             <constraint firstItem="R3b-Ll-kSc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="huV-Sb-HD1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iEy-Ds-bg1" secondAttribute="bottom" constant="20" id="icy-og-aYQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="N4l-k7-0JD" secondAttribute="trailing" id="xXz-ZA-R9w"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -41,4 +57,7 @@
             <point key="canvasLocation" x="56.799999999999997" y="26.53673163418291"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="casey-horner-763014-unsplash" width="1338" height="2005"/>
+    </resources>
 </document>

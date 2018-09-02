@@ -33,12 +33,12 @@ class PermissionButton: UIButton {
     }
     
     private func setup() {
-        layer.borderWidth = 2.0
-        layer.borderColor = UIColor.white.cgColor
+//        layer.borderWidth = 2.0
+//        layer.borderColor = UIColor.white.cgColor
         layer.cornerRadius = 5.0
-        layer.backgroundColor = UIColor(white: 1.0, alpha: 0.5).cgColor
+        layer.backgroundColor = UIColor(white: 1.0, alpha: 1.0).cgColor
         
-        titleEdgeInsets = UIEdgeInsets(top: 0.0, left: 10.0, bottom: 0.0, right: 10.0)
+        titleEdgeInsets = UIEdgeInsets(top: 5.0, left: 10.0, bottom: 5.0, right: 10.0)
     }
     
     func refresh() {
