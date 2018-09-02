@@ -28,8 +28,7 @@ class PermissionPromptViewControllerAnimationController: NSObject, UIViewControl
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         if isPresenting {
             animatePresentationTransition(transitionContext)
-        }
-        else {
+        } else {
             animateDismissalTransition(transitionContext)
         }
     }

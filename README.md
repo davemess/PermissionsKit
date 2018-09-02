@@ -11,11 +11,10 @@ _Project_
 - [x] Convert to Swift 4.2
 - [x] Update min SDK version
 - [ ] Unit Testing
-- [ ] Swift Lint
+- [x] Swift Lint
 - [ ] Docs/Jazzy
 - [ ] Badges
 - [ ] Setup TravisCI
-- [ ] Add TODO check
 
 _Features_
 - [ ] Add remaining permissions

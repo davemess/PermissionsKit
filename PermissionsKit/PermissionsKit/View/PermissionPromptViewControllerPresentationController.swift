@@ -40,7 +40,7 @@ class PermissionPromptViewControllerPresentationController: UIPresentationContro
         containerView.addSubview(chromeView)
         containerView.addSubview(presentedViewController.view)
         
-        coordinator.animate(alongsideTransition: { context in
+        coordinator.animate(alongsideTransition: { _ in
             self.chromeView.alpha = 1.0
             }, completion: nil)
     }
@@ -55,7 +55,7 @@ class PermissionPromptViewControllerPresentationController: UIPresentationContro
         
         guard let coordinator = presentedViewController.transitionCoordinator else { return }
         
-        coordinator.animate(alongsideTransition: { context in
+        coordinator.animate(alongsideTransition: { _ in
             self.chromeView.alpha = 0.0
             }, completion: nil)
     }
