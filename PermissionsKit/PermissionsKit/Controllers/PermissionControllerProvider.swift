@@ -19,6 +19,11 @@ public class PermissionControllerProvider {
     
     // MARK: - Properties
     
+    private lazy var cameraPermissionController: CameraPermissionController = {
+        let controller = CameraPermissionController()
+        return controller
+    }()
+    
     private lazy var contactsPermissionController: ContactsPermissionController = {
         let controller = ContactsPermissionController()
         return controller
@@ -34,6 +39,11 @@ public class PermissionControllerProvider {
         return controller
     }()
     
+    private lazy var microphonePermissionController: MicrophonePermissionController = {
+        let controller = MicrophonePermissionController()
+        return controller
+    }()
+    
     private lazy var photosPermissionController: PhotosPermissionController = {
         return PhotosPermissionController()
     }()
@@ -46,12 +56,16 @@ public class PermissionControllerProvider {
     /// - Returns: a controller for the specified permission.
     public func permissionController(_ permission: Permission) -> PermissionController {
         switch permission {
+        case .camera:
+            return cameraPermissionController
         case .contacts:
             return contactsPermissionController
         case .locationWhenInUse:
             return whenInUseLocationPermissionController
         case .locationAlways:
             return alwaysLocationPermissionController
+        case .microphone:
+            return microphonePermissionController
         case .photos:
             return photosPermissionController
         }

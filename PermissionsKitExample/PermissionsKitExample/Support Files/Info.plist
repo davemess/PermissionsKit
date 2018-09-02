@@ -20,15 +20,19 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>We use this permission for demonstration purposes. Your app should customize this message.</string>
+	<key>NSContactsUsageDescription</key>
+	<string>We use this permission for demonstration purposes. Your app should customize this message.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>We use this permission for demonstration purposes. Your app should customize this message.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>We use this permission for demonstration purposes. Your app should customize this message.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>We use this permission for demonstration purposes. Your app should customize this message.</string>
-	<key>NSPhotoLibraryUsageDescription</key>
+	<key>NSMicrophoneUsageDescription</key>
 	<string>We use this permission for demonstration purposes. Your app should customize this message.</string>
-	<key>NSContactsUsageDescription</key>
+	<key>NSPhotoLibraryUsageDescription</key>
 	<string>We use this permission for demonstration purposes. Your app should customize this message.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

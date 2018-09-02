@@ -41,6 +41,8 @@
 		CE93F7B920B08FDC00DE984A /* PermissionPromptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F7B220B08FDC00DE984A /* PermissionPromptViewModel.swift */; };
 		CE972EF7213C60EF00F2151E /* UIViewController+PermissionPromptController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE972EF6213C60EF00F2151E /* UIViewController+PermissionPromptController.swift */; };
 		CE972EFF213C809100F2151E /* ContactsPermissionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE972EFE213C809100F2151E /* ContactsPermissionController.swift */; };
+		CE972F01213C89C000F2151E /* CameraPermissionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE972F00213C89C000F2151E /* CameraPermissionController.swift */; };
+		CE972F03213C8BB400F2151E /* MicrophonePermissionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE972F02213C8BB400F2151E /* MicrophonePermissionController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +68,8 @@
 		CE93F7B220B08FDC00DE984A /* PermissionPromptViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionPromptViewModel.swift; sourceTree = "<group>"; };
 		CE972EF6213C60EF00F2151E /* UIViewController+PermissionPromptController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+PermissionPromptController.swift"; sourceTree = "<group>"; };
 		CE972EFE213C809100F2151E /* ContactsPermissionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsPermissionController.swift; sourceTree = "<group>"; };
+		CE972F00213C89C000F2151E /* CameraPermissionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPermissionController.swift; sourceTree = "<group>"; };
+		CE972F02213C8BB400F2151E /* MicrophonePermissionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrophonePermissionController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,8 +164,10 @@
 		CE93F79D20B08F3F00DE984A /* Concrete */ = {
 			isa = PBXGroup;
 			children = (
+				CE972F00213C89C000F2151E /* CameraPermissionController.swift */,
 				CE972EFE213C809100F2151E /* ContactsPermissionController.swift */,
 				CE93F79E20B08F4700DE984A /* LocationPermissionController.swift */,
+				CE972F02213C8BB400F2151E /* MicrophonePermissionController.swift */,
 				CE93F7A020B08F5600DE984A /* PhotosPermissionController.swift */,
 			);
 			path = Concrete;
@@ -344,6 +350,8 @@
 				CE93F7AB20B08FA400DE984A /* PermissionStatus.swift in Sources */,
 				CE93F79A20B08F1700DE984A /* PermissionControllerProvider.swift in Sources */,
 				CE93F7B620B08FDC00DE984A /* PermissionPromptViewControllerPresentationController.swift in Sources */,
+				CE972F03213C8BB400F2151E /* MicrophonePermissionController.swift in Sources */,
+				CE972F01213C89C000F2151E /* CameraPermissionController.swift in Sources */,
 				CE93F7A720B08F9300DE984A /* PermissionError.swift in Sources */,
 				CE93F7A520B08F8A00DE984A /* Permission.swift in Sources */,
 				CE93F7B920B08FDC00DE984A /* PermissionPromptViewModel.swift in Sources */,

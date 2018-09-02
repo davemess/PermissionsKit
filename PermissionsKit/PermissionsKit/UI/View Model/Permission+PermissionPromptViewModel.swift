@@ -16,29 +16,32 @@ extension Permission {
     }
     
     private var iconImage: UIImage {
-        let bundle = Bundle(for: PermissionPromptView.self)
+        let iconName: String
         
         switch self {
-        case .contacts:
-            return UIImage(named: "icon_contacts", in: bundle, compatibleWith: nil)!
-        case .locationAlways:
-            return UIImage(named: "icon_location", in: bundle, compatibleWith: nil)!
-        case .locationWhenInUse:
-            return UIImage(named: "icon_location", in: bundle, compatibleWith: nil)!
-        case .photos:
-            return UIImage(named: "icon_photos", in: bundle, compatibleWith: nil)!
+        case .camera, .contacts, .microphone, .photos:
+            iconName = String(format: "icon_%@", String(describing: self))
+        case .locationAlways, .locationWhenInUse:
+            iconName = "icon_location"
         }
+        
+        let bundle = Bundle(for: PermissionPromptView.self)
+        return UIImage(named: iconName, in: bundle, compatibleWith: nil)!
     }
     
     private var displayReason: String {
         // TODO: replace text
         switch self {
+        case .camera:
+            return NSLocalizedString("Camera permission is necessary for accessing your camera.", comment: "")
         case .contacts:
             return NSLocalizedString("Contacts permission is necessary for accessing your list of contacts.", comment: "")
         case .locationAlways:
             return NSLocalizedString("Location permission is necessary for determining your current location.", comment: "")
         case .locationWhenInUse:
             return NSLocalizedString("Location permission is necessary for determining your current location.", comment: "")
+        case .microphone:
+            return NSLocalizedString("Microphone permission is necessary for recording audio.", comment: "")
         case .photos:
             return NSLocalizedString("Photos permission is necessary for accessing your photo album.", comment: "")
         }
