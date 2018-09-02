@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import CoreLocation
 
 /// A singleton provider for supplying PermissionControllers.
 public class PermissionControllerProvider {
@@ -20,20 +19,23 @@ public class PermissionControllerProvider {
     
     // MARK: - Properties
     
+    private lazy var contactsPermissionController: ContactsPermissionController = {
+        let controller = ContactsPermissionController()
+        return controller
+    }()
+    
     private lazy var alwaysLocationPermissionController: LocationPermissionController = {
-        let locationManager = CLLocationManager()
-        let controller = LocationAlwaysPermissionController(locationManager)
+        let controller = LocationAlwaysPermissionController()
         return controller
     }()
     
     private lazy var whenInUseLocationPermissionController: LocationPermissionController = {
-        let locationManager = CLLocationManager()
-        let controller = LocationWhenInUsePermissionController(locationManager)
+        let controller = LocationWhenInUsePermissionController()
         return controller
     }()
     
     private lazy var photosPermissionController: PhotosPermissionController = {
-        PhotosPermissionController()
+        return PhotosPermissionController()
     }()
     
     // MARK: - Public
@@ -44,6 +46,8 @@ public class PermissionControllerProvider {
     /// - Returns: a controller for the specified permission.
     public func permissionController(_ permission: Permission) -> PermissionController {
         switch permission {
+        case .contacts:
+            return contactsPermissionController
         case .locationWhenInUse:
             return whenInUseLocationPermissionController
         case .locationAlways:

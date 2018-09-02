@@ -40,6 +40,7 @@
 		CE93F7B820B08FDC00DE984A /* PermissionPromptViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE93F7B120B08FDC00DE984A /* PermissionPromptViewController.xib */; };
 		CE93F7B920B08FDC00DE984A /* PermissionPromptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F7B220B08FDC00DE984A /* PermissionPromptViewModel.swift */; };
 		CE972EF7213C60EF00F2151E /* UIViewController+PermissionPromptController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE972EF6213C60EF00F2151E /* UIViewController+PermissionPromptController.swift */; };
+		CE972EFF213C809100F2151E /* ContactsPermissionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE972EFE213C809100F2151E /* ContactsPermissionController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		CE93F7B120B08FDC00DE984A /* PermissionPromptViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PermissionPromptViewController.xib; sourceTree = "<group>"; };
 		CE93F7B220B08FDC00DE984A /* PermissionPromptViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionPromptViewModel.swift; sourceTree = "<group>"; };
 		CE972EF6213C60EF00F2151E /* UIViewController+PermissionPromptController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+PermissionPromptController.swift"; sourceTree = "<group>"; };
+		CE972EFE213C809100F2151E /* ContactsPermissionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsPermissionController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 		CE93F79D20B08F3F00DE984A /* Concrete */ = {
 			isa = PBXGroup;
 			children = (
+				CE972EFE213C809100F2151E /* ContactsPermissionController.swift */,
 				CE93F79E20B08F4700DE984A /* LocationPermissionController.swift */,
 				CE93F7A020B08F5600DE984A /* PhotosPermissionController.swift */,
 			);
@@ -344,6 +347,7 @@
 				CE93F7A720B08F9300DE984A /* PermissionError.swift in Sources */,
 				CE93F7A520B08F8A00DE984A /* Permission.swift in Sources */,
 				CE93F7B920B08FDC00DE984A /* PermissionPromptViewModel.swift in Sources */,
+				CE972EFF213C809100F2151E /* ContactsPermissionController.swift in Sources */,
 				CE93F7B320B08FDC00DE984A /* PermissionPromptViewControllerAnimationController.swift in Sources */,
 				CE93F79C20B08F2E00DE984A /* PermissionPromptController.swift in Sources */,
 				CE93F7A120B08F5600DE984A /* PhotosPermissionController.swift in Sources */,

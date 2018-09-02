@@ -11,26 +11,41 @@ import UIKit
 /// Extends Permission with factory method to generate PermissionPromptViewModel.
 extension Permission {
     
-    func toPromptViewModel() -> PermissionPromptViewModel {
-        let icon: UIImage
-        let title: String
-        let reason: String
-        
+    private var displayTitle: String {
+        return String(describing: self).capitalized
+    }
+    
+    private var iconImage: UIImage {
         let bundle = Bundle(for: PermissionPromptView.self)
         
         switch self {
-        case .locationWhenInUse, .locationAlways:
-            icon = UIImage(named: "icon_location", in: bundle, compatibleWith: nil)!
-            title = NSLocalizedString("Location", comment: "")
-            reason = NSLocalizedString("Location permission is necessary for determining your current location.", comment: "") // TODO: replace text
-            
+        case .contacts:
+            return UIImage(named: "icon_contacts", in: bundle, compatibleWith: nil)!
+        case .locationAlways:
+            return UIImage(named: "icon_location", in: bundle, compatibleWith: nil)!
+        case .locationWhenInUse:
+            return UIImage(named: "icon_location", in: bundle, compatibleWith: nil)!
         case .photos:
-            icon = UIImage(named: "icon_photos", in: bundle, compatibleWith: nil)!
-            title = NSLocalizedString("Photos", comment: "")
-            reason = NSLocalizedString("Photos permission is necessary for accessing your photo album.", comment: "") // TODO: replace text
+            return UIImage(named: "icon_photos", in: bundle, compatibleWith: nil)!
         }
-        
-        let viewModel = PermissionPromptViewModel(icon: icon, title: title, reason: reason)
+    }
+    
+    private var displayReason: String {
+        // TODO: replace text
+        switch self {
+        case .contacts:
+            return NSLocalizedString("Contacts permission is necessary for accessing your list of contacts.", comment: "")
+        case .locationAlways:
+            return NSLocalizedString("Location permission is necessary for determining your current location.", comment: "")
+        case .locationWhenInUse:
+            return NSLocalizedString("Location permission is necessary for determining your current location.", comment: "")
+        case .photos:
+            return NSLocalizedString("Photos permission is necessary for accessing your photo album.", comment: "")
+        }
+    }
+    
+    func toPromptViewModel() -> PermissionPromptViewModel {
+        let viewModel = PermissionPromptViewModel(icon: iconImage, title: displayTitle, reason: displayReason)
         return viewModel
     }
 }

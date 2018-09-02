@@ -28,7 +28,7 @@ class LocationPermissionController: NSObject, PermissionController {
     
     // MARK: - Lifecycle
     
-    init(_ locationManager: CLLocationManager) {
+    init(_ locationManager: CLLocationManager = CLLocationManager()) {
         self.locationManager = locationManager
         super.init()
         
