@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "icons8-contacts.pdf"
+      "filename" : "003-agenda.pdf"
     }
   ],
   "info" : {
@@ -11,6 +11,7 @@
   },
   "properties" : {
     "compression-type" : "lossless",
+    "template-rendering-intent" : "template",
     "preserves-vector-representation" : true
   }
 }

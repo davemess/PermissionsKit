@@ -33,8 +33,6 @@ class PermissionButton: UIButton {
     }
     
     private func setup() {
-//        layer.borderWidth = 2.0
-//        layer.borderColor = UIColor.white.cgColor
         layer.cornerRadius = 5.0
         layer.backgroundColor = UIColor(white: 1.0, alpha: 1.0).cgColor
         

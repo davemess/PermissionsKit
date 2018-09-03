@@ -5,7 +5,11 @@
 ![Platform Version](https://cocoapod-badges.herokuapp.com/p/arek/badge.png)
 
 # PermissionsKit
-PermissionsKit is an easy-to-use and unified Swift API for determining and requesting access to system resources that require user permission. In addition, a simple UI is included for prompting the user for permissions. Out of the box, the following permissions are supported:
+PermissionsKit is an easy-to-use and unified Swift API for determining and requesting access to system resources that require user permission. In addition, a simple UI is included for prompting the user for permissions.
+
+![](./Resources/Demo.gif)
+
+Out of the box, the following permissions are supported:
 
 - Calendar
 - Camera
@@ -132,6 +136,10 @@ class MyCustomViewController: UIViewController, PermissionPromptController {
 ```
 ---
 
+### Contributing
+
+Definitely looking for contributors. Particularly UI designers.
+
 ### License
 
 PermissionsKit is available under the MIT license. See the LICENSE file for more info.
@@ -148,3 +156,4 @@ _Admin_
 - [x] Update README with usage examples
 - [ ] Versioning
 - [ ] Unit Testing
+- [ ] New UI!

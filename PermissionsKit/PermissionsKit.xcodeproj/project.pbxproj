@@ -46,6 +46,7 @@
 		CE972F05213C8FDB00F2151E /* EventStorePermissionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE972F04213C8FDB00F2151E /* EventStorePermissionController.swift */; };
 		CE972F07213CC9BD00F2151E /* MotionPermissionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE972F06213CC9BD00F2151E /* MotionPermissionController.swift */; };
 		CE972F0B213D922D00F2151E /* MediaPermissionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE972F0A213D922D00F2151E /* MediaPermissionController.swift */; };
+		CE972F0D213DA5E100F2151E /* PermissionPromptButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE972F0C213DA5E100F2151E /* PermissionPromptButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		CE972F04213C8FDB00F2151E /* EventStorePermissionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventStorePermissionController.swift; sourceTree = "<group>"; };
 		CE972F06213CC9BD00F2151E /* MotionPermissionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionPermissionController.swift; sourceTree = "<group>"; };
 		CE972F0A213D922D00F2151E /* MediaPermissionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPermissionController.swift; sourceTree = "<group>"; };
+		CE972F0C213DA5E100F2151E /* PermissionPromptButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionPromptButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				CE93F7B020B08FDC00DE984A /* PermissionPromptView.swift */,
+				CE972F0C213DA5E100F2151E /* PermissionPromptButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				CE93F7A720B08F9300DE984A /* PermissionError.swift in Sources */,
 				CE972F05213C8FDB00F2151E /* EventStorePermissionController.swift in Sources */,
 				CE93F7A520B08F8A00DE984A /* Permission.swift in Sources */,
+				CE972F0D213DA5E100F2151E /* PermissionPromptButton.swift in Sources */,
 				CE93F7B920B08FDC00DE984A /* PermissionPromptViewModel.swift in Sources */,
 				CE972EFF213C809100F2151E /* ContactsPermissionController.swift in Sources */,
 				CE972F07213CC9BD00F2151E /* MotionPermissionController.swift in Sources */,

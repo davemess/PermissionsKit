@@ -33,8 +33,8 @@ class PermissionPromptViewController: UIViewController {
     }
     
     func setUp() {
-        self.modalPresentationStyle = .custom
-        self.transitioningDelegate = self
+//        self.modalPresentationStyle = .custom
+//        self.transitioningDelegate = self
     }
     
     // MARK: - view Lifecycle
