@@ -80,6 +80,7 @@ public class PermissionControllerProvider {
     ///
     /// - Parameter permission: the requested permission resource.
     /// - Returns: a controller for the specified permission.
+    // swiftlint:disable:next cyclomatic_complexity
     public func permissionController(_ permission: Permission) -> PermissionController {
         switch permission {
         case .calendar:
@@ -106,5 +107,4 @@ public class PermissionControllerProvider {
             return speechPermissionController
         }
     }
-    
 }

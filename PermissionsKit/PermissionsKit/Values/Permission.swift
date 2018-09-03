@@ -10,17 +10,14 @@ import Foundation
 
 /// Defines a set of iOS permissions.
 public enum Permission: CaseIterable {
-    // TODO: add remaining permissions
     case calendar
     case camera
     case contacts
-//    case health
     case locationWhenInUse
     case locationAlways
     case media
     case microphone
     case motion
-//    case notifications
     case photos
     case reminders
     case speech
