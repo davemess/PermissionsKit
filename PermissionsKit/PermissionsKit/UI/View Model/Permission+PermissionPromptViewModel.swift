@@ -19,7 +19,7 @@ extension Permission {
         let iconName: String
         
         switch self {
-        case .calendar, .camera, .contacts, .microphone, .photos, .reminders:
+        case .calendar, .camera, .contacts, .microphone, .motion, .photos, .reminders:
             iconName = String(format: "icon_%@", String(describing: self))
         case .locationAlways, .locationWhenInUse:
             iconName = "icon_location"
@@ -44,6 +44,8 @@ extension Permission {
             return NSLocalizedString("Location permission is necessary for determining your current location.", comment: "")
         case .microphone:
             return NSLocalizedString("Microphone permission is necessary for recording audio.", comment: "")
+        case .motion:
+            return NSLocalizedString("Motion permission is necessary for accessing your step data.", comment: "")
         case .photos:
             return NSLocalizedString("Photos permission is necessary for accessing your photo album.", comment: "")
         case .reminders:

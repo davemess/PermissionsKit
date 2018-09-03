@@ -11,17 +11,16 @@ import Foundation
 /// Defines a set of iOS permissions.
 public enum Permission: CaseIterable {
     // TODO: add remaining permissions
-//    case bluetooth
     case calendar
     case camera
-//    case cloudKit
     case contacts
+//    case health
     case locationWhenInUse
     case locationAlways
 //    case media
     case microphone
-//    case motion
-//    case music
+    case motion
+//    case notifications
     case photos
     case reminders
 //    case speech
@@ -43,6 +42,8 @@ extension Permission: CustomStringConvertible {
             return NSLocalizedString("location always", comment: "")
         case .microphone:
             return NSLocalizedString("microphone", comment: "")
+        case .motion:
+            return NSLocalizedString("motion", comment: "")
         case .photos:
             return NSLocalizedString("photos", comment: "")
         case .reminders:

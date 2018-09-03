@@ -44,6 +44,7 @@
 		CE972F01213C89C000F2151E /* CameraPermissionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE972F00213C89C000F2151E /* CameraPermissionController.swift */; };
 		CE972F03213C8BB400F2151E /* MicrophonePermissionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE972F02213C8BB400F2151E /* MicrophonePermissionController.swift */; };
 		CE972F05213C8FDB00F2151E /* EventStorePermissionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE972F04213C8FDB00F2151E /* EventStorePermissionController.swift */; };
+		CE972F07213CC9BD00F2151E /* MotionPermissionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE972F06213CC9BD00F2151E /* MotionPermissionController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		CE972F00213C89C000F2151E /* CameraPermissionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPermissionController.swift; sourceTree = "<group>"; };
 		CE972F02213C8BB400F2151E /* MicrophonePermissionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrophonePermissionController.swift; sourceTree = "<group>"; };
 		CE972F04213C8FDB00F2151E /* EventStorePermissionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventStorePermissionController.swift; sourceTree = "<group>"; };
+		CE972F06213CC9BD00F2151E /* MotionPermissionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionPermissionController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 				CE972F04213C8FDB00F2151E /* EventStorePermissionController.swift */,
 				CE93F79E20B08F4700DE984A /* LocationPermissionController.swift */,
 				CE972F02213C8BB400F2151E /* MicrophonePermissionController.swift */,
+				CE972F06213CC9BD00F2151E /* MotionPermissionController.swift */,
 				CE93F7A020B08F5600DE984A /* PhotosPermissionController.swift */,
 			);
 			path = Concrete;
@@ -360,6 +363,7 @@
 				CE93F7A520B08F8A00DE984A /* Permission.swift in Sources */,
 				CE93F7B920B08FDC00DE984A /* PermissionPromptViewModel.swift in Sources */,
 				CE972EFF213C809100F2151E /* ContactsPermissionController.swift in Sources */,
+				CE972F07213CC9BD00F2151E /* MotionPermissionController.swift in Sources */,
 				CE93F7B320B08FDC00DE984A /* PermissionPromptViewControllerAnimationController.swift in Sources */,
 				CE93F79C20B08F2E00DE984A /* PermissionPromptController.swift in Sources */,
 				CE93F7A120B08F5600DE984A /* PhotosPermissionController.swift in Sources */,
