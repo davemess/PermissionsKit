@@ -145,6 +145,7 @@ Definitely looking for contributors. Particularly UI designers.
 PermissionsKit is available under the MIT license. See the LICENSE file for more info.
 
 ### Credits
+
 - Background image photo by Casey Horner on Unsplash.
 - Icons from Flaticon.
 
