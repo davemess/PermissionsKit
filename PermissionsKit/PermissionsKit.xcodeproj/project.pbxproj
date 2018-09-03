@@ -45,6 +45,7 @@
 		CE972F03213C8BB400F2151E /* MicrophonePermissionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE972F02213C8BB400F2151E /* MicrophonePermissionController.swift */; };
 		CE972F05213C8FDB00F2151E /* EventStorePermissionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE972F04213C8FDB00F2151E /* EventStorePermissionController.swift */; };
 		CE972F07213CC9BD00F2151E /* MotionPermissionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE972F06213CC9BD00F2151E /* MotionPermissionController.swift */; };
+		CE972F0B213D922D00F2151E /* MediaPermissionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE972F0A213D922D00F2151E /* MediaPermissionController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		CE972F02213C8BB400F2151E /* MicrophonePermissionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrophonePermissionController.swift; sourceTree = "<group>"; };
 		CE972F04213C8FDB00F2151E /* EventStorePermissionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventStorePermissionController.swift; sourceTree = "<group>"; };
 		CE972F06213CC9BD00F2151E /* MotionPermissionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionPermissionController.swift; sourceTree = "<group>"; };
+		CE972F0A213D922D00F2151E /* MediaPermissionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPermissionController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 				CE972EFE213C809100F2151E /* ContactsPermissionController.swift */,
 				CE972F04213C8FDB00F2151E /* EventStorePermissionController.swift */,
 				CE93F79E20B08F4700DE984A /* LocationPermissionController.swift */,
+				CE972F0A213D922D00F2151E /* MediaPermissionController.swift */,
 				CE972F02213C8BB400F2151E /* MicrophonePermissionController.swift */,
 				CE972F06213CC9BD00F2151E /* MotionPermissionController.swift */,
 				CE93F7A020B08F5600DE984A /* PhotosPermissionController.swift */,
@@ -357,6 +360,7 @@
 				CE93F79A20B08F1700DE984A /* PermissionControllerProvider.swift in Sources */,
 				CE93F7B620B08FDC00DE984A /* PermissionPromptViewControllerPresentationController.swift in Sources */,
 				CE972F03213C8BB400F2151E /* MicrophonePermissionController.swift in Sources */,
+				CE972F0B213D922D00F2151E /* MediaPermissionController.swift in Sources */,
 				CE972F01213C89C000F2151E /* CameraPermissionController.swift in Sources */,
 				CE93F7A720B08F9300DE984A /* PermissionError.swift in Sources */,
 				CE972F05213C8FDB00F2151E /* EventStorePermissionController.swift in Sources */,

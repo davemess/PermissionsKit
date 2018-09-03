@@ -17,13 +17,13 @@ public enum Permission: CaseIterable {
 //    case health
     case locationWhenInUse
     case locationAlways
-//    case media
+    case media
     case microphone
     case motion
 //    case notifications
     case photos
     case reminders
-//    case speech
+    case speech
 }
 
 extension Permission: CustomStringConvertible {
@@ -40,6 +40,8 @@ extension Permission: CustomStringConvertible {
             return NSLocalizedString("location when in use", comment: "")
         case .locationAlways:
             return NSLocalizedString("location always", comment: "")
+        case .media:
+            return NSLocalizedString("media", comment: "")
         case .microphone:
             return NSLocalizedString("microphone", comment: "")
         case .motion:
@@ -48,6 +50,8 @@ extension Permission: CustomStringConvertible {
             return NSLocalizedString("photos", comment: "")
         case .reminders:
             return NSLocalizedString("reminders", comment: "")
+        case .speech:
+            return NSLocalizedString("speech", comment: "")
         }
     }
     

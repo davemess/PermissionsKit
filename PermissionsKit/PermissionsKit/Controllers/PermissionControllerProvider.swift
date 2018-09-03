@@ -44,10 +44,10 @@ public class PermissionControllerProvider {
         return controller
     }()
     
-//    private lazy var mediaPermissionController: MediaPermissionController = {
-//        let controller = MediaPermissionController()
-//        return controller
-//    }()
+    private lazy var mediaPermissionController: MediaPermissionController = {
+        let controller = MediaPermissionController()
+        return controller
+    }()
     
     private lazy var microphonePermissionController: MicrophonePermissionController = {
         let controller = MicrophonePermissionController()
@@ -69,10 +69,10 @@ public class PermissionControllerProvider {
         return controller
     }()
     
-//    private lazy var speechPermissionController: SpeechPermissionController = {
-//        let controller = SpeechPermissionController()
-//        return controller
-//    }()
+    private lazy var speechPermissionController: SpeechPermissionController = {
+        let controller = SpeechPermissionController()
+        return controller
+    }()
     
     // MARK: - Public
     
@@ -92,8 +92,8 @@ public class PermissionControllerProvider {
             return whenInUseLocationPermissionController
         case .locationAlways:
             return alwaysLocationPermissionController
-//        case .media:
-//            return mediaPermissionController
+        case .media:
+            return mediaPermissionController
         case .microphone:
             return microphonePermissionController
         case .motion:
@@ -102,8 +102,8 @@ public class PermissionControllerProvider {
             return photosPermissionController
         case .reminders:
             return remindersPermissionController
-//        case .speech:
-//            return speechPermissionController
+        case .speech:
+            return speechPermissionController
         }
     }
     
