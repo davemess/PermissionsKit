@@ -9,13 +9,13 @@
 import UIKit
 
 /// View model for configuring a PermissionPromptView.
-struct PermissionPromptViewModel {
+public struct PermissionPromptViewModel {
     
-    let icon: UIImage
-    let title: String
-    let reason: String
+    public let icon: UIImage
+    public let title: String
+    public let reason: String
     
-    init(icon: UIImage, title: String, reason: String) {
+    public init(icon: UIImage, title: String, reason: String) {
         self.icon = icon
         self.title = title
         self.reason = reason

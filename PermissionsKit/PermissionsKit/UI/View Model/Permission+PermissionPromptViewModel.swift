@@ -30,7 +30,6 @@ extension Permission {
     }
     
     private var displayReason: String {
-        // TODO: replace text
         switch self {
         case .calendar:
             return NSLocalizedString("Calendar permission is necessary for accessing your calendar.", comment: "")
@@ -57,7 +56,7 @@ extension Permission {
         }
     }
     
-    func toPromptViewModel() -> PermissionPromptViewModel {
+    public func toPromptViewModel() -> PermissionPromptViewModel {
         let viewModel = PermissionPromptViewModel(icon: iconImage, title: displayTitle, reason: displayReason)
         return viewModel
     }

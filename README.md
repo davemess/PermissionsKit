@@ -115,7 +115,7 @@ You can also use the included UI. For instance, conform your custom view control
 import PermissionsKit
 
 class MyCustomViewController: UIViewController, PermissionPromptController {
-  ....
+  ...
 
   @IBAction func importPhotoButtonPressed(_ sender: Any) {
     let permission: Permission = .photos
@@ -134,6 +134,30 @@ class MyCustomViewController: UIViewController, PermissionPromptController {
     }
   }
 ```
+
+If you don't want the default UI details, you can customize what's shown by configuring a PermissionPromptProvider.
+
+```swift
+import PermissionsKit
+
+class MyCustomPromptProvider: PermissionPromptController {
+
+  // eg. load prompt data from a JSON file such as
+  // {
+  //  "title": "Camera",
+  //  "reason": "We want to be able to take photos.",
+  //  "icon": "camera_image",
+  //  }
+
+  func viewModel(for permission: Permission) -> PermissionPromptViewModel {
+    let title = data["title"]
+    let reason = data["reason"]
+    let icon = UIImage(named: data["icon"])
+
+    return PermissionPromptViewModel(icon: icon, title: title, reason: reason)
+  }
+```
+
 ---
 
 ### Contributing

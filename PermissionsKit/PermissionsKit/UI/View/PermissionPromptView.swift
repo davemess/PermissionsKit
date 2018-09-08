@@ -27,7 +27,8 @@ class PermissionPromptView: UIView {
     // MARK: - configuration
     
     func configure(_ permission: Permission) {
-        let viewModel = permission.toPromptViewModel()
+        let provider = PermissionsKit.provider
+        let viewModel = provider.viewModel(for: permission)
         configure(viewModel)
     }
     
