@@ -13,7 +13,7 @@ import UIKit
 /// to get prompt behavior for free.
 public extension PermissionPromptController where Self: UIViewController {
     
-    public func promptForPermission(_ permission: Permission, animated: Bool, resultHandler: @escaping PermissionPromptResultHandler) {
+    func promptForPermission(_ permission: Permission, animated: Bool, resultHandler: @escaping PermissionPromptResultHandler) {
         let controller = provider.permissionController(permission)
         let handler: PermissionPromptResultHandler = { result in
             self.dismiss(animated: animated) {
