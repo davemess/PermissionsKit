@@ -37,7 +37,7 @@ public protocol PermissionPromptController {
 // MARK: - Default implementations of prompt controller functions.
 public extension PermissionPromptController {
     
-    public var provider: PermissionControllerProvider {
+    var provider: PermissionControllerProvider {
         return PermissionControllerProvider.standard
     }
     

@@ -22,6 +22,8 @@ class PhotosPermissionController: PermissionController {
             return .denied
         case .authorized:
             return .permitted
+        @unknown default:
+            fatalError()
         }
     }
     
@@ -42,6 +44,8 @@ class PhotosPermissionController: PermissionController {
                     resultHandler(.denied(error: error))
                 case .authorized:
                     resultHandler(.accepted)
+                @unknown default:
+                    fatalError()
                 }
             }
         }

@@ -56,6 +56,8 @@ class LocationWhenInUsePermissionController: LocationPermissionController {
             return .denied
         case .authorizedWhenInUse:
             return .permitted
+        @unknown default:
+            fatalError()
         }
     }
     
@@ -79,6 +81,8 @@ extension LocationWhenInUsePermissionController {
             resultHandler(.denied(error: error))
         case .authorizedWhenInUse:
             resultHandler(.accepted)
+        @unknown default:
+            fatalError()
         }
     }
 }
@@ -97,6 +101,8 @@ class LocationAlwaysPermissionController: LocationPermissionController {
             return .denied
         case .authorizedAlways:
             return .permitted
+        @unknown default:
+            fatalError()
         }
     }
     
@@ -120,6 +126,8 @@ extension LocationAlwaysPermissionController {
             resultHandler(.denied(error: error))
         case .authorizedAlways:
             resultHandler(.accepted)
+        @unknown default:
+            fatalError()
         }
     }
 }

@@ -16,8 +16,10 @@ public extension PermissionPromptController where Self: UIViewController {
     func promptForPermission(_ permission: Permission, animated: Bool, resultHandler: @escaping PermissionPromptResultHandler) {
         let controller = provider.permissionController(permission)
         let handler: PermissionPromptResultHandler = { result in
-            self.dismiss(animated: animated) {
-                resultHandler(result)
+            DispatchQueue.main.async {
+                self.dismiss(animated: animated) {
+                    resultHandler(result)
+                }
             }
         }
         

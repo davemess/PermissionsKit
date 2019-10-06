@@ -21,6 +21,8 @@ class EventStorePermissionController: PermissionController {
             return .calendar
         case .reminder:
             return .reminders
+        @unknown default:
+            fatalError()
         }
     }
     
@@ -33,6 +35,8 @@ class EventStorePermissionController: PermissionController {
             return .denied
         case .authorized:
             return .permitted
+        @unknown default:
+            fatalError()
         }
     }
     

@@ -22,6 +22,8 @@ class MicrophonePermissionController: PermissionController {
             return .denied
         case .granted:
             return .permitted
+        @unknown default:
+            fatalError()
         }
     }
     

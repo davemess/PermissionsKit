@@ -22,6 +22,8 @@ class ContactsPermissionController: PermissionController {
             return .denied
         case .authorized:
             return .permitted
+        @unknown default:
+            fatalError()
         }
     }
     

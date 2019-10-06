@@ -22,6 +22,8 @@ class MediaPermissionController: PermissionController {
             return .denied
         case .authorized:
             return .permitted
+        @unknown default:
+            fatalError()
         }
     }
     
@@ -42,6 +44,8 @@ class MediaPermissionController: PermissionController {
                     resultHandler(.denied(error: error))
                 case .authorized:
                     resultHandler(.accepted)
+                @unknown default:
+                    fatalError()
                 }
             }
         }
@@ -64,6 +68,8 @@ class SpeechPermissionController: PermissionController {
             return .denied
         case .authorized:
             return .permitted
+        @unknown default:
+            fatalError()
         }
     }
     
@@ -84,6 +90,8 @@ class SpeechPermissionController: PermissionController {
                     resultHandler(.denied(error: error))
                 case .authorized:
                     resultHandler(.accepted)
+                @unknown default:
+                    fatalError()
                 }
             }
         }
